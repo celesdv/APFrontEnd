@@ -1,0 +1,15 @@
+<div class="row">
+  <ul class="row">
+    <li *ngFor="let soft of softSkillList" class="col-xs-12 col-sm-6 col-md-2 col-lg-2">
+      <div>
+        <div>
+          <circle-progress [percent]=soft.percentage [title]="soft.name"[outerStrokeWidth]="15" 
+          [innerStrokeWidth]="1" [outerStrokeColor]="'#e17b8d'" [innerStrokeColor]="'#e17b8d'" 
+          [animation]="true" [animationDuration]="600" [responsive]="true" [radius]="100" [showUnits]="false"
+          [titleColor]="'#e17b8d'" [showSubtitle]="false">
+          </circle-progress>
+        </div>
+      </div>
+    </li>
+  </ul>
+</div>

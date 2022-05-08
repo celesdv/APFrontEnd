@@ -1,0 +1,18 @@
+<div class="row p-5" id="education">
+    <h3>Formación Académica</h3>
+    <div>
+      <ul>
+        <li class="row p-2" *ngFor="let education of educationList">          
+          <div class="col-lg-1">
+            <img [src]="education.image" alt="" class="img-fluid">
+          </div>
+          <div class="col-lg-11">
+            <h4>{{education.title}}</h4>
+            <h6>{{education.institution}}</h6>
+            <p><span>{{education.start}}</span> - <span>{{education.end}}</span></p>
+          </div>
+        </li>      
+      </ul>
+    </div>
+  </div>
+  

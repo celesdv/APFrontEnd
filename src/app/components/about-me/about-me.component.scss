@@ -1,0 +1,61 @@
+div {
+    text-align: center;
+    color: white;
+}
+#aboutMe{
+    background-color: #52afa6;
+    height: 230px;
+}
+.row {
+    padding: 20px;
+}
+img {
+    border-radius: 100%;  
+    box-sizing: border-box;
+    box-shadow: 0 0 10px grey;
+}
+img:hover {
+    box-shadow: 0 0 20px #e17b8d;
+}
+
+/*foto de perfil*/
+#photo {   
+    position: absolute;      
+    top: 310px;
+    width: 15%;
+    left: 10%;
+}
+
+@media all and (min-width: 967px) and (max-width: 1066px){
+    #photo {
+        top: 320px;
+        width: 18%;
+        left: 10%;
+    } 
+}
+
+@media all and (min-width: 867px) and (max-width: 966px){
+    #photo {
+        top: 320px;
+        width: 18%;
+        left: 12%;
+    } 
+}
+
+@media all and (min-width: 767px) and (max-width: 866px){
+    #photo {
+        width: 15%;
+        top: 330px;
+    } 
+}
+
+@media all and (max-width: 767px){
+    #photo {
+        position: initial;
+        width: 60%;
+        margin: auto;
+    } 
+    #aboutMe{
+        height: auto;
+    }
+}
