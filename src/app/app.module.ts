@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { HttpClientModule } from '@angular/common/http'
+import { HttpClient, HttpClientModule } from '@angular/common/http'
 import { NgCircleProgressModule } from 'ng-circle-progress';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -17,6 +17,7 @@ import { SoftSkillsComponent } from './components/soft-skills/soft-skills.compon
 import { ProjectsComponent } from './components/projects/projects.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { SocialComponent } from './components/social/social.component';
+import { LoginComponent } from './components/login/login.component';
 
 
 @NgModule({
@@ -33,7 +34,8 @@ import { SocialComponent } from './components/social/social.component';
     SoftSkillsComponent,
     ProjectsComponent,
     FooterComponent,
-    SocialComponent
+    SocialComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,

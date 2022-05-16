@@ -4,38 +4,6 @@
     "description": "soy arquitecta estudiando..... Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus consequatur veritatis nihil! Ex blanditiis quia tenetur deserunt recusandae sequi pariatur eos minima modi repellendus! Repudiandae, fugiat nostrum! Dolore, cupiditate corrupti. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Incidunt, quas asperiores perspiciatis vitae possimus iusto voluptatibus accusamus amet mollitia debitis temporibus culpa eius repudiandae earum dolor neque natus officiis nobis.",
     "image": "../../../assets/perfilPhoto.jpg",
     "banner": "../../../assets/libro.png",
-    "social": [
-        {
-            "id": "1",
-            "image": "../../../assets/github.png",
-            "link": "#"
-        },
-        {
-            "id": "1",
-            "image": "../../../assets/linkedin.png",
-            "link": "#"
-        }
-    ],
-    "experience": [
-        {
-            "id": "1",
-            "position": "Arquitecta",
-            "company": "Independiente",
-            "image": "../../../assets/um.ong.png",
-            "start": "2012",
-            "end": "Actualmente",
-            "description": "Arquitecta independiente - Proyecto y dirección técnica de obra. Modelado 3D y Renderizado"
-        },
-        {
-            "id": "2",
-            "position": "Diseñadora",
-            "company": "Independiente",
-            "image": "../../../assets/um.ong.png",
-            "start": "2012",
-            "end": "Actualmente",
-            "description": "Diseño gráfico"
-        }
-    ],
     "education": [
         {
             "id": "1",
@@ -76,6 +44,26 @@
             "image": "../../../assets/um.ong.png",
             "start": "2021",
             "end": "Actualmente"
+        }
+    ],    
+    "experience": [
+        {
+            "id": "1",
+            "position": "Arquitecta",
+            "company": "Independiente",
+            "image": "../../../assets/um.ong.png",
+            "start": "2012",
+            "end": "Actualmente",
+            "description": "Arquitecta independiente - Proyecto y dirección técnica de obra. Modelado 3D y Renderizado"
+        },
+        {
+            "id": "2",
+            "position": "Diseñadora",
+            "company": "Independiente",
+            "image": "../../../assets/um.ong.png",
+            "start": "2012",
+            "end": "Actualmente",
+            "description": "Diseño gráfico"
         }
     ],
     "hardSkill": [
@@ -145,6 +133,18 @@
             "image": "../../../assets/java.png",
             "description": "Juego Piedra/Papel/Tijera realizado en HTML y JS",
             "link": "https://github.com/celesdv/WebPiedraPapelTijera"
+        }
+    ],
+    "social": [
+        {
+            "id": "1",
+            "image": "../../../assets/github.png",
+            "link": "#"
+        },
+        {
+            "id": "1",
+            "image": "../../../assets/linkedin.png",
+            "link": "#"
         }
     ]
 }
