@@ -1,9 +1,24 @@
 <div class="row p-5" id="experience">
-  <h3>Experiencia Laboral</h3>
-  <p>Mi experiencia laboral</p>
+  <div class="d-grid gap-3 d-md-flex justify-content-md-end m-2">
+    <div>
+      <h3>Experiencia Laboral</h3>
+      <h5>Mi experiencia laboral</h5>
+    </div>
+    <button *ngIf="authUser" class="btn text-white">
+      <span class="material-icons fs-1">add_circle</span>
+    </button>
+  </div>
   <ul>
     <li class="m-5" *ngFor="let experience of experienceList">
-      <div class="row">        
+      <div class="row">
+        <div>
+          <button *ngIf="authUser" class="btn text-white">
+            <span class="material-icons">edit</span>
+          </button>
+          <button *ngIf="authUser" class="btn text-white">
+            <span class="material-icons">delete</span>
+          </button>
+        </div>
         <div class="col-xs-6 col-sm-6 col-md-10 col-lg-10 p-2">
           <h4>{{experience.position}}</h4>
           <h6>{{experience.company}}</h6>

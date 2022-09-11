@@ -1,9 +1,13 @@
-<div>
-    <ul>
-        <li *ngFor="let social of socialList">
-            <a [href]="social.link">
-                <img [src]="social.image" alt="gitHub" id="icono" class="m-3">
-            </a>
-        </li>
-    </ul>
+<div class="d-grid gap-3 d-md-flex justify-content-md-center m-3">
+  <div *ngFor="let social of socialList" class="social-icons">
+    <div>
+      <button *ngIf="authUser" class="btn text-white">
+        <span class="material-icons">edit</span>
+      </button>
+      <button *ngIf="authUser" class="btn text-white">
+        <span class="material-icons">delete</span>
+      </button>
+    </div>
+    <a [href]="social.link"><img [src]="social.image"></a>
+  </div>
 </div>

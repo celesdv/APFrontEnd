@@ -12,26 +12,18 @@ export class professional{
     position: String;
     banner: String;
     description: String;
-    education: EducationComponent[];
-    experience: ExperienceComponent[];
-    hardSkill: HardSkillsComponent[];
-    softSkill: SoftSkillsComponent[];
-    project: ProjectsComponent[];
-    social: SocialComponent[];
+    education!: EducationComponent[];
+    experience!: ExperienceComponent[];
+    hardSkill!: HardSkillsComponent[];
+    softSkill!: SoftSkillsComponent[];
+    project!: ProjectsComponent[];
+    social!: SocialComponent[];
 
-    constructor(name:String, image:String, position:String, banner:String, description:String,
-        education:EducationComponent[], experience:ExperienceComponent[], hardSkill:HardSkillsComponent[], 
-        softSkill:SoftSkillsComponent[], project:ProjectsComponent[], social:SocialComponent[]){
-            this.name = name;
-            this.image = image;
-            this.position = position;
-            this.banner = banner;
-            this.description = description;
-            this.education = education;
-            this.experience = experience;
-            this.hardSkill = hardSkill;
-            this.softSkill = softSkill;
-            this.project = project;
-            this.social = social;
-        }
+    constructor(name:String, image:String, position:String, banner:String, description:String){
+        this.name = name,
+        this.image = image,
+        this.position = position,
+        this.banner = banner
+        this.description = description;
+    }
 }

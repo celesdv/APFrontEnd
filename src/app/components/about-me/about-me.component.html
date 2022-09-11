@@ -1,16 +1,70 @@
+<div class="row">
+  <img [src]="myInformation.banner" alt="miImagen" id="imgBanner" class="img-fluid">
+</div>
 <div class="row" id="aboutMe">
-    <div class="col-xs-12 col-sm-12 col-md-5 col-lg-5" id="photo">
-      <img [src]="myInformation.image" alt="fotoDePerfil" class="img-fluid">
+  <div id="photo">
+    <div class="button-container">
+      <img [src]="myInformation.image" alt="fotoDePerfil" class="img-fluid" id="imgPerfil">
+    </div>
+    <div>
       <h3>{{myInformation.name}}</h3>
       <p>{{myInformation.position}}</p>
     </div>
-    <div class="row">
-      <div class="col-md-3 col-lg-3"></div>
-      <div class="col-xs-12 col-sm-12 col-md-9 col-lg-9 p-3">
-        <span>
+  </div>
+  <div class="row">
+    <div class="col-md-4 col-lg-4"></div>
+    <div class="col-xs-12 col-sm-12 col-md-7 col-lg-7 p-3">
+      <span>
+        <div class="d-grid d-md-flex justify-content-md-center">
           <h2>Acerca de mi</h2>
-          <p class="pt-4 pb-2 pr-5 pl-5">{{myInformation.description}}</p>
-        </span>
+          <button *ngIf="authUser" class="btn text-white" data-bs-toggle="modal" data-bs-target="#acercaDeModal"
+          (click)="loadData()">
+            <span class="material-icons">edit</span>
+          </button>
+        </div>
+        <p class="pt-4 pb-2 pr-5 pl-5">{{myInformation.description}}</p>
+      </span>
+    </div>
+  </div>
+</div>
+
+
+<!-- Modal -->
+<div class="modal fade" id="acercaDeModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header bg-dark">
+        <h5 class="modal-title" id="exampleModalLabel">Editar Acerca de mi</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"
+          id="cerrarAcercaDeModal"></button>
+      </div>
+      <div class="modal-body">
+        <form [formGroup]="formEdit" (ngSubmit)="onSubmit($event)">
+          <div class="mb-3">
+            <label for="acercaDe" class="form-label text-dark">Nombre</label>
+            <input type="text" class="form-control" id="acercaDe" formControlName="name">
+          </div>
+          <div class="mb-3">
+            <label for="acercaDe" class="form-label text-dark">Imagen de Perfil</label>
+            <input type="text" class="form-control" id="acercaDe" formControlName="image">
+          </div>
+          <div class="mb-3">
+            <label for="acercaDe" class="form-label text-dark">Posicion</label>
+            <input type="text" class="form-control" id="acercaDe" formControlName="position">
+          </div>
+          <div class="mb-3">
+            <label for="acercaDe" class="form-label text-dark">Imagen Banner</label>
+            <input type="text" class="form-control" id="acercaDe" formControlName="banner">
+          </div>
+          <div class="mb-3">
+            <label for="acercaDe" class="form-label text-dark">Descripcion</label>
+            <input type="text" class="form-control" id="acercaDe" formControlName="description">
+          </div>
+          <div class="modal-footer">
+            <button type="submit" class="btn btn-secondary" [disabled]="formEdit.invalid">Guardar</button>
+          </div>
+        </form>
       </div>
     </div>
   </div>
+</div>

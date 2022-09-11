@@ -4,10 +4,10 @@
     box-sizing: border-box;
     background-color: #e2b700;
 }
-h3{       
+h3, h6{       
     color: white ;
 }
-h5 {
+h4, .btn{
     color: #e2b700;
 }
 ul{
@@ -15,4 +15,7 @@ ul{
 }
 img{
     width: 100%;
+}
+.card{
+    border-radius: 30px;
 }

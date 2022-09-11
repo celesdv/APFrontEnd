@@ -1,14 +1,23 @@
+<div class="d-grid d-md-flex justify-content-md-center">
+  <h5 class="m-1">Soft Skills</h5>
+  <button *ngIf="authUser" class="btn">
+    <span class="material-icons">add_circle</span>
+  </button>
+</div>
 <div class="row">
   <ul class="row">
     <li *ngFor="let soft of softSkillList" class="col-xs-12 col-sm-6 col-md-2 col-lg-2">
-      <div>
-        <div>
-          <circle-progress [percent]=soft.percentage [title]="soft.name"[outerStrokeWidth]="15" 
-          [innerStrokeWidth]="1" [outerStrokeColor]="'#e17b8d'" [innerStrokeColor]="'#e17b8d'" 
-          [animation]="true" [animationDuration]="600" [responsive]="true" [radius]="100" [showUnits]="false"
-          [titleColor]="'#e17b8d'" [showSubtitle]="false">
-          </circle-progress>
-        </div>
+      <div class="m-3">
+        <button *ngIf="authUser" class="btn">
+          <span class="material-icons">edit</span>
+        </button>
+        <button *ngIf="authUser" class="btn">
+          <span class="material-icons">delete</span>
+        </button>
+        <circle-progress [percent]=soft.percentage [title]="soft.name" [outerStrokeWidth]="15" [innerStrokeWidth]="1"
+          [outerStrokeColor]="'#e17b8d'" [innerStrokeColor]="'#e17b8d'" [animation]="true" [animationDuration]="600"
+          [responsive]="true" [radius]="100" [showUnits]="false" [titleColor]="'#e17b8d'" [showSubtitle]="false">
+        </circle-progress>
       </div>
     </li>
   </ul>

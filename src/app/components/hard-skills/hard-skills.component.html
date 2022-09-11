@@ -1,7 +1,19 @@
+<div class="d-grid d-md-flex justify-content-md-center">
+  <h5 class="m-1">Hard Skills</h5>
+  <button *ngIf="authUser" class="btn">
+    <span class="material-icons">add_circle</span>
+  </button>
+</div>
 <div class="row">
   <ul class="row">
     <li *ngFor="let hard of hardSkillList" class="col-xs-12 col-sm-6 col-md-2 col-lg-2 text-center">
-      <div>
+      <div class="m-3">
+        <button *ngIf="authUser" class="btn">
+          <span class="material-icons">edit</span>
+        </button>
+        <button *ngIf="authUser" class="btn">
+          <span class="material-icons">delete</span>
+        </button>
         <circle-progress [percent]=hard.percentage [imageSrc]="hard.image" [showImage]="true" [imageHeight]="90"
           [imageWidth]="90" [outerStrokeWidth]="15" [innerStrokeWidth]="1" [outerStrokeColor]="'#e17b8d'"
           [innerStrokeColor]="'#e17b8d'" [animation]="true" [animationDuration]="600" [responsive]="true"

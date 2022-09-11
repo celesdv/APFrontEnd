@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AutenticathionService } from 'src/app/services/autenticathion.service';
 import { PortfolioService } from 'src/app/services/portfolio.service';
 
 @Component({
@@ -8,13 +9,16 @@ import { PortfolioService } from 'src/app/services/portfolio.service';
 })
 export class SoftSkillsComponent implements OnInit {
   softSkillList:any;
-  constructor(private dataPortfolio:PortfolioService) { }
+  authUser: boolean = false;
+
+  constructor(private dataPortfolio:PortfolioService, private auth:AutenticathionService) { }
 
   ngOnInit(): void {
     this.dataPortfolio.getData().subscribe(data=>{
       console.log(data);
       this.softSkillList=data.softSkill;
-    });
+    });    
+    this.authUser = this.auth.authenticated();
   }
 
 }
